@@ -1,0 +1,84 @@
+<p>roles works!</p>
+
+<!-- <div class="row">
+    <div class="col-3">
+        <p>{{firstName}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{currentDate}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{isActive}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{angularVersion}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{selectedState}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <input type="text" [value]="firstName" class="form-control" >
+    </div>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="firstName">    
+    </div>
+    <div class="col-3">
+        <input [type]="inputType" />
+    </div>
+    <div class="col-3">
+        <select [(ngModel)]="selectedState">
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="showWelcomeAlert()">Submit</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-success" (click)="showMessage('to dotnet')">welcome dotnet</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-success" (click)="showMessage('to react')">react</button>
+    </div>
+</div> -->
+
+<!-- <div class="row">
+    <div class="col-4">
+        <ul>
+            <li *ngFor = "let x of roleList">{{x.role}},{{x.roleId}}</li>
+        </ul>
+    </div>
+    <div class="col-4">
+        <select>
+            <option *ngFor = "let item of roleList" [value]="item.roleId">{{item.role}}</option>
+        </select>
+    </div>
+    <div class="col-4">
+        <button *ngFor="let item of roleList">{{item.role}}</button>
+    </div>
+</div> -->
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Role Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of roleList;let srno = index">
+                    <td>{{srno+1}}</td>
+                    <td>{{item.role}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
